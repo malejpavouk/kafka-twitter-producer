@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+version = '0.0.1'
+
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE'
+    }
+}
+
+springBoot {
+    backupSource = false
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.apache.kafka:kafka_2.11:0.11.0.1') {
+        exclude(module: 'slf4j-log4j12')
+    }
+    compile 'org.twitter4j:twitter4j-stream:4.0.6'
+    compile 'ch.qos.logback:logback-classic:1.1.11'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.1'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.1'
+    compile('org.springframework.boot:spring-boot-starter') {
+        exclude(module: 'commons-logging')
+    }
+    compile 'org.springframework.kafka:spring-kafka:1.2.2.RELEASE'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

@@ -1,0 +1,14 @@
+server:
+  port: 7776
+  context-path: '/'
+
+
+# Reading From Twitter
+consumerKey: ''
+consumerSecret: ''
+accessToken: ''
+accessTokenSecret: ''
+
+# Kafka conf
+broker.list: 'localhost:9092'
+kafka.topic: 'twitter'
