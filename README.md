@@ -1,7 +1,8 @@
 Kafka Twitter Producer (Spring Boot)
 ======================
 
-Consumes messages from [Twitter](https://twitter.com/) using [Twitter4j](http://twitter4j.org/en/index.html) library and sends the tweets into [Apache Kafka](https://kafka.apache.org/) topic.
+Consumes messages from [Twitter](https://twitter.com/) using [Twitter4j](http://twitter4j.org/en/index.html) library and sends the tweets 
+into [Apache Kafka](https://kafka.apache.org/) broker.
 
 Configuration
 -------------
